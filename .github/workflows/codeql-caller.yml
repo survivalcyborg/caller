@@ -16,19 +16,19 @@ jobs:
   set_parameters:
     runs-on: ubuntu-latest
     outputs:
-      languages: ${{ steps.set_languages.outputs.languages }}
-      build_modes: ${{ steps.set_build_modes.outputs.build_modes }}
+      language: ${{ steps.set_language.outputs.language }}
+      build_mode: ${{ steps.set_build_mode.outputs.build_mode }}
 
     steps:
-      - name: Set Languages
-        id: set_languages
+      - name: Set Language
+        id: set_language
         run: |
-          echo "::set-output name=languages::java,python"
+          echo "::set-output name=language::java,python"
       
-      - name: Set Build Modes
-        id: set_build_modes
+      - name: Set Build Mode
+        id: set_build_mode
         run: |
-          echo "::set-output name=build_modes::autobuild,none"
+          echo "::set-output name=build_mode::autobuild,none"
 
   dispatch_codeql:
     needs: set_parameters
@@ -42,6 +42,6 @@ jobs:
           event-type: run-codeql
           client-payload: |
             {
-              "languages": "${{ needs.set_parameters.outputs.languages }}",
-              "build_modes": "${{ needs.set_parameters.outputs.build_modes }}"
+              "language": "${{ needs.set_parameters.outputs.language }}",
+              "build_mode": "${{ needs.set_parameters.outputs.build_mode }}"
             }
