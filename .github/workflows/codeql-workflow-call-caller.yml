@@ -29,8 +29,8 @@ jobs:
           - runner-tag: ubuntu-latest
 #          - language: javascrip-typescript
 #            build-mode: none
-#          - language: java-kotlin
-#            build-mode: autobuild
+          - language: java-kotlin
+            build-mode: autobuild
 #          - build-command-java-kotlin : './mvnw clean isntall || ./.gradlew assamble'
 #          - language: ruby
 #            build-mode: none
@@ -52,7 +52,7 @@ jobs:
       language: ${{matrix.language}}
       build-mode: ${{matrix.build-mode}}
       runner-tag: ${{matrix.runner-tag}}
-#      build-command-java-kotling: ${{matrix.build-command-java-kotlin}}
+#      build-command-java-kotlin: ${{matrix.build-command-java-kotlin}}
 #      build-command-c-cpp: ${{matrix.build-command-c-cpp}}
 #      build-command-csharp: ${{matrix.build-command-csharp}}
 #      build-command-go: ${{build-command-go}}
