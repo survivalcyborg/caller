@@ -25,6 +25,8 @@ jobs:
         include:
           - language: python
             build-mode: none
+          - language: java
+            build-mode: autobuild
     uses: survivalcyborg/ghas/.github/workflows/codeql-workflow-call.yml@main
     with:
       language: ${{matrix.language}}
