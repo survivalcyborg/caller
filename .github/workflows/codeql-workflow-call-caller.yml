@@ -26,11 +26,11 @@ jobs:
         include:
           - language: python
             build-mode: none
-          - runner-tag: 'ubuntu-latest'
+          - runner-tag: ubuntu-latest
 #          - language: javascrip-typescript
 #            build-mode: none
-          - language: java-kotlin
-            build-mode: autobuild
+#          - language: java-kotlin
+#            build-mode: autobuild
 #          - build-command-java-kotlin : './mvnw clean isntall || ./.gradlew assamble'
 #          - language: ruby
 #            build-mode: none
