@@ -24,32 +24,32 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - languages: python
+          - language: python
             build-mode: none
 #          - runner-tag: ubuntu-latest
-#          - languages: javascrip-typescript
+#          - language: javascrip-typescript
 #            build-mode: none
-#          - languages: java-kotlin
+#          - language: java-kotlin
 #            build-mode: autobuild
 #          - build-command-java-kotlin : './mvnw clean isntall || ./.gradlew assamble'
-          - languages: ruby
+          - language: ruby
             build-mode: none
-#          - languages: c-cpp
+#          - language: c-cpp
 #            build-mode: autobuild
 #          - build-command-c-cpp: ''
-#          - languages: chsarp
+#          - language: chsarp
 #            build-mode: autobuild         
 #          - build-command-chsarp: './Mysolution.sln'
-#          - languages: go
+#          - language: go
 #            build-mode: autobuild
 #          - build-command-go: ''
-#          - languages: swift
+#          - language: swift
 #            build mode: autobuild
 #          - build-commmand-swift: ''
 
     uses: survivalcyborg/ghas/.github/workflows/codeql-workflow-call.yml@main
     with:
-      languages: ${{matrix.languages}}
+      language: ${{matrix.language}}
       build-mode: ${{matrix.build-mode}}
 #      runner-tag: ${{matrix.runner-tag}}
 #      build-command-java-kotlin: ${{matrix.build-command-java-kotlin}}
