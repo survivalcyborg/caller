@@ -1,0 +1,25 @@
+name: codeql-workflow-call-caller
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  call-codeql:
+    strategy:
+      matrix:
+        include:
+          - language: python
+            build-mode: none
+    uses: survivalcyborg/ghas/.github/workflows/codeql-workflow-call.yml@main
+    with:
+      language: ${{matrix.language}}
+      build-mode: ${{matrix.build-mode}}
