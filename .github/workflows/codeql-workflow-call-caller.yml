@@ -26,7 +26,7 @@ jobs:
         include:
           - language: python
             build-mode: none
-          - runner-tag: ubuntu-latest
+#          - runner-tag: ubuntu-latest
 #          - language: javascrip-typescript
 #            build-mode: none
 #          - language: java-kotlin
@@ -51,7 +51,7 @@ jobs:
     with:
       language: ${{matrix.language}}
       build-mode: ${{matrix.build-mode}}
-      runner-tag: ${{matrix.runner-tag}}
+#      runner-tag: ${{matrix.runner-tag}}
 #      build-command-java-kotlin: ${{matrix.build-command-java-kotlin}}
 #      build-command-c-cpp: ${{matrix.build-command-c-cpp}}
 #      build-command-csharp: ${{matrix.build-command-csharp}}
