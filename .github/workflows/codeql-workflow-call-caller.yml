@@ -51,6 +51,7 @@ jobs:
     with:
       language: ${{matrix.language}}
       build-mode: ${{matrix.build-mode}}
+      runner-tag: ${{matrix.runner-tag}}
 #      build-command-java-kotling: ${{matrix.build-command-java-kotlin}}
 #      build-command-c-cpp: ${{matrix.build-command-c-cpp}}
 #      build-command-csharp: ${{matrix.build-command-csharp}}
