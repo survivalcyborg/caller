@@ -37,9 +37,9 @@ jobs:
 #          - language: c-cpp
 #            build-mode: autobuild
 #          - build-command-c-cpp: 'make'
-#          - language: chsarp
+#          - language: csharp
 #            build-mode: autobuild         
-#          - build-command-chsarp: './Mysolution.sln'
+#          - build-command-csharp: './Mysolution.sln'
 #          - language: go
 #            build-mode: autobuild
 #          - build-command-go: ''
