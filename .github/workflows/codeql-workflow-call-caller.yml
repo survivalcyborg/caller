@@ -32,8 +32,8 @@ jobs:
 #          - language: java-kotlin
 #            build-mode: autobuild
 #          - build-command-java-kotlin : './mvnw clean isntall || ./.gradlew assamble'
-#          - language: ruby
-#            build-mode: none
+          - language: ruby
+            build-mode: none
 #          - language: c-cpp
 #            build-mode: autobuild
 #          - build-command-c-cpp: ''
