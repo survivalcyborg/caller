@@ -50,7 +50,7 @@ jobs:
     uses: survivalcyborg/ghas/.github/workflows/codeql-workflow-call.yml@main
     with:
       languages: ${{matrix.languages}}
-      build-modes: ${{matrix.build-modes}}
+      build-mode: ${{matrix.build-mode}}
 #      runner-tag: ${{matrix.runner-tag}}
 #      build-command-java-kotlin: ${{matrix.build-command-java-kotlin}}
 #      build-command-c-cpp: ${{matrix.build-command-c-cpp}}
