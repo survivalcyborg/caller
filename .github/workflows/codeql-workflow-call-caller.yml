@@ -36,7 +36,7 @@ jobs:
             build-mode: none
 #          - language: c-cpp
 #            build-mode: autobuild
-#          - build-command-c-cpp: ''
+#          - build-command-c-cpp: 'make'
 #          - language: chsarp
 #            build-mode: autobuild         
 #          - build-command-chsarp: './Mysolution.sln'
