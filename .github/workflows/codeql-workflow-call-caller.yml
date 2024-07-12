@@ -11,13 +11,13 @@ on:
       - develop
   schedule:
     - cron: '0 0 * * 0'
-    
+
 permissions:
   security-events: write
   packages: read
   actions: read
   contents: read
-  
+
 jobs:
   call-codeql:
     strategy:
@@ -26,9 +26,33 @@ jobs:
         include:
           - language: python
             build-mode: none
-          - language: java
-            build-mode: autobuild
+          - runner-tag: ubuntu-latest
+#          - language: javascrip-typescript
+#            build-mode: none
+#          - language: java-kotlin
+#            build-mode: autobuild
+#          - build-command-java-kotlin : './mvnw clean isntall || ./.gradlew assamble'
+#          - language: ruby
+#            build-mode: none
+#          - language: c-cpp
+#            build-mode: autobuild
+#          - build-command-c-cpp: ''
+#          - language: chsarp
+#            build-mode: autobuild         
+#          - build-command-chsarp: './Mysolution.sln'
+#          - language: go
+#            build-mode: autobuild
+#          - build-command-go: ''
+#          - language: swift
+#            build mode: autobuild
+#          - build-commmand-swift: ''
+
     uses: survivalcyborg/ghas/.github/workflows/codeql-workflow-call.yml@main
     with:
       language: ${{matrix.language}}
       build-mode: ${{matrix.build-mode}}
+#      build-command-java-kotling: ${{matrix.build-command-java-kotlin}}
+#      build-command-c-cpp: ${{matrix.build-command-c-cpp}}
+#      build-command-csharp: ${{matrix.build-command-csharp}}
+#      build-command-go: ${{build-command-go}}
+#      build-commmand-swift: ${{build-commmand-swift}}
