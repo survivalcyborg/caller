@@ -11,7 +11,13 @@ on:
       - develop
   schedule:
     - cron: '0 0 * * 0'
-
+    
+permissions:
+  security-events: write
+  packages: read
+  actions: read
+  contents: read
+  
 jobs:
   call-codeql:
     strategy:
