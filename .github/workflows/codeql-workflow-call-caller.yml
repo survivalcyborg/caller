@@ -24,9 +24,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
+#          - runner-tag: ubuntu-latest
           - language: python
             build-mode: none
-#          - runner-tag: ubuntu-latest
 #          - language: javascrip-typescript
 #            build-mode: none
 #          - language: java-kotlin
