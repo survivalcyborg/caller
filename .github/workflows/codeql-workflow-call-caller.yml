@@ -21,6 +21,7 @@ permissions:
 jobs:
   call-codeql:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - language: python
